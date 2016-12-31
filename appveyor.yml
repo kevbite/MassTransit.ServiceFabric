@@ -1,0 +1,76 @@
+-
+  branches:
+    only:
+      - master
+
+  version: 0.0.{build}
+  install:
+    - ps : .\environment-install.ps1
+
+  assembly_info:
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}'
+    file: AssemblyInfo.*
+    patch: true
+
+  before_build:
+    - ps : .\build-before_build.ps1
+
+  build:
+    parallel: true
+    verbosity: normal
+    publish_nuget: true
+
+  configuration: Release
+
+  cache:
+    - packages -> **\packages.config
+
+  test:
+    assemblies:
+      - '**\*.Tests.dll'
+
+  artifacts:
+    - path: '*.nupkg'
+
+  deploy:
+    - provider: Environment
+      name: NuGet.org
+
+-
+  branches:
+    except:
+      - master
+
+  version: 0.0.0-{branch}{build}
+
+  install:
+    - ps : .\environment-install.ps1
+
+  assembly_info:
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}'
+    file: AssemblyInfo.*
+    patch: true
+
+  before_build:
+    - ps : .\build-before_build.ps1
+
+  build:
+    parallel: true
+    verbosity: normal
+    publish_nuget: true
+
+  configuration: Release
+
+  cache:
+    - packages -> **\packages.config
+
+  test:
+    assemblies:
+      - '**\*.Tests.dll'
+
+  artifacts:
+    - path: '*.nupkg'
