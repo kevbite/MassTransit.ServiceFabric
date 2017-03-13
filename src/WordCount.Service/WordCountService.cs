@@ -36,7 +36,7 @@ namespace Kevsoft.WordCount.Service
             };
         }
 
-        private IBusControl CreateBus(IReliableStateManager stateManager)
+        private static IBusControl CreateBus(IReliableStateManager stateManager)
         {
             var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
