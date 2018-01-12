@@ -14,7 +14,7 @@ Path to the file containing the publish profile.
 .PARAMETER ApplicationPackagePath
 Path to the folder of the packaged Service Fabric application.
 
-.PARAMETER DeployOnly
+.PARAMETER DeloyOnly
 Indicates that the Service Fabric application should not be created or upgraded after registering the application type.
 
 .PARAMETER ApplicationParameter
@@ -139,7 +139,6 @@ function Read-PublishProfile
 
     $publishProfile.ClusterConnectionParameters = Read-XmlElementAsHashtable $publishProfileXml.PublishProfile.Item("ClusterConnectionParameters")
     $publishProfile.UpgradeDeployment = Read-XmlElementAsHashtable $publishProfileXml.PublishProfile.Item("UpgradeDeployment")
-    $publishProfile.CopyPackageParameters = Read-XmlElementAsHashtable $publishProfileXml.PublishProfile.Item("CopyPackageParameters")
 
     if ($publishProfileXml.PublishProfile.Item("UpgradeDeployment"))
     {
@@ -197,29 +196,6 @@ Import-Module "$ModuleFolderPath\ServiceFabricSDK.psm1"
 
 $IsUpgrade = ($publishProfile.UpgradeDeployment -and $publishProfile.UpgradeDeployment.Enabled -and $OverrideUpgradeBehavior -ne 'VetoUpgrade') -or $OverrideUpgradeBehavior -eq 'ForceUpgrade'
 
-$PublishParameters = @{
-    'ApplicationPackagePath' = $ApplicationPackagePath
-    'ApplicationParameterFilePath' = $publishProfile.ApplicationParameterFile
-    'ApplicationParameter' = $ApplicationParameter
-    'ErrorAction' = 'Stop'
-}
-
-if ($publishProfile.CopyPackageParameters.CopyPackageTimeoutSec)
-{
-    $PublishParameters['CopyPackageTimeoutSec'] = $publishProfile.CopyPackageParameters.CopyPackageTimeoutSec
-}
-
-if ($publishProfile.CopyPackageParameters.CompressPackage)
-{
-    $PublishParameters['CompressPackage'] = $publishProfile.CopyPackageParameters.CompressPackage
-}
-
-# CopyPackageTimeoutSec parameter overrides the value from the publish profile
-if ($CopyPackageTimeoutSec)
-{
-    $PublishParameters['CopyPackageTimeoutSec'] = $CopyPackageTimeoutSec
-}
-
 if ($IsUpgrade)
 {
     $Action = "RegisterAndUpgrade"
@@ -236,11 +212,14 @@ if ($IsUpgrade)
         $UpgradeParameters = @{ UnmonitoredAuto = $true; Force = $true }
     }
 
-    $PublishParameters['Action'] = $Action
-    $PublishParameters['UpgradeParameters'] = $UpgradeParameters
-    $PublishParameters['UnregisterUnusedVersions'] = $UnregisterUnusedApplicationVersionsAfterUpgrade
-
-    Publish-UpgradedServiceFabricApplication @PublishParameters
+    if ($CopyPackageTimeoutSec)
+    {
+        Publish-UpgradedServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -UpgradeParameters $UpgradeParameters -ApplicationParameter $ApplicationParameter -UnregisterUnusedVersions:$UnregisterUnusedApplicationVersionsAfterUpgrade -CopyPackageTimeoutSec $CopyPackageTimeoutSec -ErrorAction Stop
+    }
+    else
+    {
+        Publish-UpgradedServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -UpgradeParameters $UpgradeParameters -ApplicationParameter $ApplicationParameter -UnregisterUnusedVersions:$UnregisterUnusedApplicationVersionsAfterUpgrade -ErrorAction Stop
+    }
 }
 else
 {
@@ -249,10 +228,13 @@ else
     {
         $Action = "Register"
     }
-
-    $PublishParameters['Action'] = $Action
-    $PublishParameters['OverwriteBehavior'] = $OverwriteBehavior
-    $PublishParameters['SkipPackageValidation'] = $SkipPackageValidation
     
-    Publish-NewServiceFabricApplication @PublishParameters
+    if ($CopyPackageTimeoutSec)
+    {
+        Publish-NewServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -ApplicationParameter $ApplicationParameter -OverwriteBehavior $OverwriteBehavior -SkipPackageValidation:$SkipPackageValidation -CopyPackageTimeoutSec $CopyPackageTimeoutSec -ErrorAction Stop
+    }
+    else
+    {
+        Publish-NewServiceFabricApplication -ApplicationPackagePath $ApplicationPackagePath -ApplicationParameterFilePath $publishProfile.ApplicationParameterFile -Action $Action -ApplicationParameter $ApplicationParameter -OverwriteBehavior $OverwriteBehavior -SkipPackageValidation:$SkipPackageValidation -ErrorAction Stop
+    }
 }

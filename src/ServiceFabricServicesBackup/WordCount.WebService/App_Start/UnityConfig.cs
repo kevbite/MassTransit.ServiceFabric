@@ -1,9 +1,7 @@
 using System.Web.Http;
 using Kevsoft.WordCount.WebService.Controllers;
 using MassTransit;
-using Unity;
-using Unity.Injection;
-using Unity.Lifetime;
+using Microsoft.Practices.Unity;
 using Unity.WebApi;
 
 namespace Kevsoft.WordCount.WebService
