@@ -22,6 +22,7 @@
     <None Include="Scripts\Deploy-FabricApplication.ps1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WordCount.CoreWeb\WordCount.CoreWeb.csproj" />
     <ProjectReference Include="..\WordCount.Service\WordCount.Service.csproj" />
     <ProjectReference Include="..\WordCount.WebService\WordCount.WebService.csproj" />
   </ItemGroup>
