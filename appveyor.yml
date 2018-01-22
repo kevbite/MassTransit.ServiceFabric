@@ -7,6 +7,9 @@
   install:
     - ps : .\environment-install.ps1
 
+  image:
+    - Visual Studio 2017
+
   assembly_info:
     assembly_version: '{version}'
     assembly_file_version: '{version}'
@@ -47,6 +50,9 @@
 
   install:
     - ps : .\environment-install.ps1
+
+  image:
+    - Visual Studio 2017
 
   assembly_info:
     assembly_version: '{version}'
