@@ -37,62 +37,63 @@
     <AdditionalFileItemNames>$(AdditionalFileItemNames);None</AdditionalFileItemNames>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\CommonServiceLocator.dll</HintPath>
+    <Reference Include="CommonServiceLocator, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\CommonServiceLocator.dll</HintPath>
     </Reference>
-    <Reference Include="GreenPipes, Version=1.2.0.96, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
-      <HintPath>..\packages\GreenPipes.1.2.0\lib\net452\GreenPipes.dll</HintPath>
+    <Reference Include="GreenPipes, Version=2.1.1.108, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <HintPath>..\packages\GreenPipes.2.1.1\lib\net452\GreenPipes.dll</HintPath>
     </Reference>
-    <Reference Include="MassTransit, Version=4.0.0.1371, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\MassTransit.4.0.0\lib\net452\MassTransit.dll</HintPath>
+    <Reference Include="MassTransit, Version=5.1.2.1528, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\MassTransit.5.1.2\lib\net452\MassTransit.dll</HintPath>
     </Reference>
-    <Reference Include="MassTransit.RabbitMqTransport, Version=4.0.0.1371, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
-      <HintPath>..\packages\MassTransit.RabbitMQ.4.0.0\lib\net452\MassTransit.RabbitMqTransport.dll</HintPath>
+    <Reference Include="MassTransit.RabbitMqTransport, Version=5.1.2.1528, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\MassTransit.RabbitMQ.5.1.2\lib\net452\MassTransit.RabbitMqTransport.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net46\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=2.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.2.0.1\lib\net461\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.3.1.0\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.4.0.0\lib\net451\Microsoft.Owin.Host.HttpListener.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Hosting, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Hosting.3.1.0\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Owin.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.4.0.0\lib\net451\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.Data.2.8.232\lib\net45\Microsoft.ServiceFabric.Data.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.Data.3.1.283\lib\net461\Microsoft.ServiceFabric.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceFabric.Data.Extensions, Version=1.3.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ServiceFabric.Data.Extensions.1.3.283\lib\net461\Microsoft.ServiceFabric.Data.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Data.Interfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.Data.2.8.232\lib\net45\Microsoft.ServiceFabric.Data.Interfaces.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ServiceFabric.Data.Interfaces.3.1.283\lib\net461\Microsoft.ServiceFabric.Data.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Diagnostics, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.Diagnostics.Internal.2.8.232\lib\net45\Microsoft.ServiceFabric.Diagnostics.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.Diagnostics.Internal.3.1.283\lib\net461\Microsoft.ServiceFabric.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Internal, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\Microsoft.ServiceFabric.Internal.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\Microsoft.ServiceFabric.Internal.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Internal.Strings, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\Microsoft.ServiceFabric.Internal.Strings.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\Microsoft.ServiceFabric.Internal.Strings.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Preview, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\Microsoft.ServiceFabric.Preview.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\Microsoft.ServiceFabric.Preview.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceFabric.ReliableCollection.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ServiceFabric.Data.Extensions.1.3.283\lib\net461\Microsoft.ServiceFabric.ReliableCollection.Interop.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ServiceFabric.Services, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.Services.2.8.232\lib\net45\Microsoft.ServiceFabric.Services.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.Services.3.1.283\lib\net461\Microsoft.ServiceFabric.Services.dll</HintPath>
     </Reference>
     <Reference Include="NewId, Version=3.0.1.17, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
       <HintPath>..\packages\NewId.3.0.1\lib\net452\NewId.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.1\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
@@ -107,55 +108,50 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Fabric, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\System.Fabric.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\System.Fabric.dll</HintPath>
     </Reference>
     <Reference Include="System.Fabric.Management.ServiceModel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\System.Fabric.Management.ServiceModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Fabric.Management.ServiceModel.XmlSerializers, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\System.Fabric.Management.ServiceModel.XmlSerializers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\System.Fabric.Management.ServiceModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Fabric.Strings, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.ServiceFabric.6.0.232\lib\net45\System.Fabric.Strings.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ServiceFabric.6.2.283\lib\net461\System.Fabric.Strings.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
-    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.Abstractions.dll</HintPath>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.6\lib\net45\System.Web.Http.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Configuration, Version=5.0.3.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.Configuration.dll</HintPath>
+    <Reference Include="Unity.Abstractions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Container, Version=5.2.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.Container.dll</HintPath>
+    <Reference Include="Unity.Configuration, Version=5.2.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Interception, Version=5.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.Interception.dll</HintPath>
+    <Reference Include="Unity.Container, Version=5.8.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Container.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Interception.Configuration, Version=5.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    <Reference Include="Unity.Interception, Version=5.5.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Interception.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RegistrationByConvention, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.Interception.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ServiceLocation, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.5.2.0\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.8.6\lib\net46\Unity.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.WebApi, Version=5.3.0.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.WebAPI.5.3.0\lib\net45\Unity.WebApi.dll</HintPath>
