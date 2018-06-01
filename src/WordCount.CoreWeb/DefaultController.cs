@@ -13,7 +13,7 @@ namespace WordCount.CoreWeb
 {
     [Produces("application/json")]
     [Route("api/Default")]
-    public class DefaultController : Controller
+    public class DefaultController : ControllerBase
     {
         private readonly IBus _bus;
 
